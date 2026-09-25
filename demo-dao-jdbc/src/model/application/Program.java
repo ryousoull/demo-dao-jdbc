@@ -25,6 +25,15 @@ public class Program {
         for (Seller obj : list) {
             System.out.println(obj);
         }
+        System.out.println("\n=== TEST 3: seller findALL ===");
+        list = sellerDao.findAll();
+        for (Seller obj : list) {
+            System.out.println(obj);
+        }
 
+        System.out.println("\n=== TEST 4: seller insert ===");
+        Seller newSeller = new Seller(null, "Adf", "adf@gmail.com", new Date(), 3500.0, departamet);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
     }
 }
